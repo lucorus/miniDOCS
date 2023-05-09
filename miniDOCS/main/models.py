@@ -39,6 +39,7 @@ class Type(models.Model):
     title = models.CharField(max_length=40)
     size = models.CharField(max_length=2)
     range = models.CharField(max_length=250)
+    value = models.CharField(max_length=200, default=0)
 
     def __str__(self):
         return self.title

@@ -76,13 +76,41 @@
     {% endblock %}
 
     {% block type %}
-    <div align="center">
-        <h1>Вес типов данных(в байтах)</h1><br>
-            {% for item in type %}
-        <h4><pre>{{ item.title }}    {{ item.size }}     {{item.range }}</pre></h4>
-        {% endfor %}
-    </div>
+
+
+        <div align="center" class="container">
+            <h1>Вес типов данных(в байтах)</h1><br>
+
+
+            <table class="table" align="center">
+                <thead>
+                <tr>
+
+                    <th scope="col">Тип</th>
+                    <th scope="col">Вес</th>
+                    <th scope="col">Диапазон допустимых значения(int)</th>
+                    <th scope="col">Значения</th>
+                </tr>
+                </thead>
+                <tbody>{% for item in type %}
+                <tr>
+
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.size }}</td>
+                    <td>{{item.range }}</td>
+                    <td>{{ item.value }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
     {% endblock %}
+
 
 </div>
 </div>
