@@ -55,7 +55,11 @@
             {% if item_function.type_return %}
                 Тип возращаемого значения: {{ item_function.type_return }}
             {% endif %}
+                {% if item_function.library %}
+                {{ item_function.library }}
+                {% endif %}
             <h6>{{ item_function.language }}</h6>
+
             </div>
 
         </div>
